@@ -1,0 +1,18 @@
+<%- include("header"); -%>
+
+    <h6>
+        <%= startingContent %>
+    </h6>
+    <hr>
+
+    <% posts.map((post)=>{ %>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p>
+            <%= post.content.substring(0, 100) + " ... " %>
+                <a href="/posts/<%= post._id %>"> Read More </a>
+        </p>
+        <% }) %>
+
+            <%- include("footer"); -%>
